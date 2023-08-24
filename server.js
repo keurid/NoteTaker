@@ -20,9 +20,23 @@ app.get('/api/notes', (req, res) => {
     res.json(notes);
 });
 
+function NoteIdGen() {
+    return Date.now().toString();
+}
+
 app.post('/api/notes', (req, res) => {
     const newNote = req.body;
-});
+  
+    if (!newNote.title || !newNote.text) {
+      return res.status(400).json({ error: 'Both title and text are required fields.' });
+    }
+  
+    newNote.id = generateNoteId();
+  
+    notes.push(newNote);
+  
+    res.json(newNote);
+  });
 
 
 app.listen(PORT, () => {
