@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/notes', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/public/notes.html');
 });
 
 app.get('/api/notes', (req, res) => {
@@ -31,7 +31,7 @@ app.post('/api/notes', (req, res) => {
       return res.status(400).json({ error: 'Both title and text are required fields.' });
     }
   
-    newNote.id = generateNoteId();
+    newNote.id = NoteIdGen();
   
     notes.push(newNote);
   
