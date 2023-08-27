@@ -1,35 +1,63 @@
-# README NoteTaker
+# Note Taking App
 
-## This is a readme generator which produces a professional template that we use in the CLI so that we can automate the need for writing a Readme all by itself.
+## Description
+
+A simple web application for taking and managing notes.
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
+- [API Routes](#api-routes)
 - [License](#license)
 
 ## Installation
-Make sure to go to the branch of README on Github.com/keurid and clone the files from NoteTaker using Git Bash and when instructed type in git clone git@github.com:keurid/NoteTaker.git. After you have done this, then you can run this code in VS code by opening the integrated terminal on the folder then typing in "node index".
+To install and run the Note Taking App, follow these steps:
+
+1. Clone the repository.
+2. Navigate to the project directory in the terminal.
+3. Install the required dependencies using `npm install`.
+4. Start the server using `node server.js`.
 
 ## Usage
-After running "node index" make sure to fill out all the selected criteria that the terminal asks you to put in.
+This app allows users to create, view, and delete notes. Users can access the app through a web browser.
 
-## Credits
-npm inquirer
+## API Routes
+The Note Taking App provides the following API routes:
+
+### `GET /api/notes`
+- Description: Retrieves all saved notes as JSON.
+- Response: An array of note objects in JSON format.
+
+### `POST /api/notes`
+- Description: Adds a new note to the list of saved notes.
+- Request Body: New note object.
+- Response: The newly created note object with a unique ID.
 
 ## License
-The MIT License
+This project is licensed under the MIT License.
 
 ## Features
-My project is running off of node based on JavaScript, which includes the npm Inquirer that can help up write a professional README.
+- Create and save notes with a title and content.
+- View a list of saved notes.
+- Delete unwanted notes.
 
 ## How to Contribute
-If you want to contribute helping with this project then you can go ahead and fork the repository onto your account then feel free to reach me at kevindesantiago99@gmail.com.
+If you would like to contribute to the Note Taking App, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and test them.
+4. Submit a pull request describing your changes.
 
 ## Tests
-You are free to test this program.
+To test the Note Taking App:
+
+1. Run the server.
+2. Use a web browser to access the app.
+3. Create, view, and delete notes to ensure all features work correctly.
 
 ## Questions
-For any questions reach out to me on https://github.com/keurid
-You can also reach me at kevindesantiago99@gmail.com
-    
+If you have any questions about the Note Taking App, feel free to reach out:
+
+GitHub: [https://github.com/keurid](https://github.com/keurid)
+Email: kevindesantiago99@email.com
